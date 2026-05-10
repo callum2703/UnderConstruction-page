@@ -16,7 +16,7 @@ title: Page Temporarily Unavailable
       We're working to bring it back online shortly.
     </p>
 
-    <a href="/" class="maintenance-button">Return Home</a>
+    <!-- a href="/" class="maintenance-button">Return Home</a> -->
   </div>
 
 </div>
