@@ -22,12 +22,38 @@ title: Page Temporarily Unavailable
 </div>
 
 <style>
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.page-header,
+.site-footer,
+.page-title,
+.site-header,
+footer {
+  display: none !important;
+}
+
+main,
+.page-content,
+.wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
 .maintenance-page {
-  min-height: 80vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 0;
   background:
     radial-gradient(circle at top left, #1fcada22, transparent 30%),
     radial-gradient(circle at bottom right, #1e355022, transparent 30%),
@@ -36,7 +62,7 @@ title: Page Temporarily Unavailable
 
 .maintenance-card {
   max-width: 650px;
-  width: 100%;
+  width: calc(100% - 2rem);
   background: white;
   padding: 3rem;
   border-radius: 20px;
@@ -51,37 +77,23 @@ title: Page Temporarily Unavailable
   animation: spin 6s linear infinite;
 }
 
-h1 {
+.maintenance-card h1 {
   margin-bottom: 1rem;
   color: #1e3550;
 }
 
-p {
+.maintenance-card p {
   font-size: 1.1rem;
   color: #4b5563;
   line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.maintenance-button {
-  display: inline-block;
-  padding: 0.9rem 1.5rem;
-  background: #1fcada;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.maintenance-button:hover {
-  background: #17b2c0;
+  margin-bottom: 0;
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -95,21 +107,5 @@ p {
   .maintenance-icon {
     font-size: 3rem;
   }
-}
-
-.page-header,
-.site-footer,
-.page-title,
-footer {
-  display: none;
-}
-
-main {
-  padding: 0;
-  margin: 0;
-}
-
-.maintenance-page {
-  min-height: 100vh;
 }
 </style>
