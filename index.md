@@ -96,4 +96,20 @@ p {
     font-size: 3rem;
   }
 }
+
+.page-header,
+.site-footer,
+.page-title,
+footer {
+  display: none;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.maintenance-page {
+  min-height: 100vh;
+}
 </style>
